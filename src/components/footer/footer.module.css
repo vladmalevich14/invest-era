@@ -1,7 +1,152 @@
-export const Footer = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+.footerWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(23, 35, 57, 1);
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 320px;
+    padding: 40px 180px 24px;
+    background-color: rgba(23, 35, 57, 1);
+    text-align: left;
+    color: rgba(219, 219, 219, 1);
+    max-width: 1920px;
+    width: 100%;
+}
+
+.footerSubContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+p {
+    margin: 0;
+}
+
+.infoAndContactsWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 105px;
+    flex-wrap: wrap;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 350px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.info > span {
+    width: 162px;
+}
+
+.info > span:nth-child(2), .info > span:nth-child(4) {
+    width: 100px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    width: 156px;
+}
+
+.contactsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contactsInfo {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(192, 192, 192, 1);
+    text-align: right;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: rgba(192, 192, 192, 1);
+}
+
+
+@media screen and (max-width: 1260px) {
+    .footerContainer {
+        padding: 40px 90px 24px;
+    }
+
+    .infoAndContactsWrapper {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .footerContainer {
+        padding: 40px 50px 24px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footerContainer {
+        padding: 40px 24px 24px;
+    }
+
+    .info {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .infoAndContactsWrapper {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footerSubContainer {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .infoAndContactsWrapper {
+        justify-content: space-between;
+    }
+}

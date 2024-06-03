@@ -46,116 +46,30 @@ h1 {
     width: 40px;
     background-color: rgba(243, 255, 249, 1);
     border-radius: 38px;
+    border: none;
 }
 
 .backArrow:hover, .nextArrow:hover {
     cursor: pointer;
 }
 
-.backArrow:hover svg path, .nextArrow:hover svg path{
+.backArrow:hover svg path, .nextArrow:hover svg path {
     fill: rgba(6, 129, 62, 1);
 }
 
 .nextArrow {
     rotate: 180deg;
+    z-index: 0;
 }
 
-.table {
-    /*max-width: 1080px;*/
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid rgba(219, 219, 219, 1);
-    border-radius: 12px;
+@media screen and (max-width: 1350px) {
+    .tableContainer {
+        padding: 24px 50px 56px;
+    }
 }
 
-.table tr:first-child th:first-child {
-    border-top-left-radius: 12px;
-}
-
-.table tr:first-child th:last-child {
-    border-top-right-radius: 12px;
-}
-
-.table tr:last-child td:first-child {
-    border-bottom-left-radius: 12px;
-}
-
-.table tr:last-child td:last-child {
-    border-bottom-right-radius: 12px;
-}
-
-.tableHead {
-    height: 120px;
-    background-color: rgba(237, 237, 237, 1);
-    font-family: Fira Code, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 1px;
-    text-align: left;
-    color: rgba(50, 58, 71, 1);
-}
-
-th {
-    vertical-align: top;
-    padding: 16px;
-}
-
-.columnHead, .companyTitle {
-    max-width: 170px;
-    font-family: Fira Code, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 1px;
-    text-align: left;
-    color: rgba(50, 58, 71, 1);
-}
-
-.columnHead > div {
-    height: 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.columnHead > div > span:nth-child(2) {
-    color: rgba(129, 131, 135, 1);
-}
-
-.tableBody tr:nth-child(even) {
-    background-color: rgba(248, 248, 248, 1);
-    border: 1px solid rgba(219, 219, 219, 1);
-}
-
-.tableBody tr:hover {
-    background-color: rgba(243, 255, 249, 1);
-}
-
-.companyName, .companyTitle {
-    width: 235px;
-    border-right: 1px solid rgba(219, 219, 219, 1);
-}
-
-.companyTitle {
-    padding-left: 24px;
-}
-
-.companyName {
-    padding: 16px 24px;
-    font-family: Fira Code, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: -0.008em;
-    text-align: left;
-}
-
-.companyIndicator {
-    font-family: Fira Code, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.008em;
-
+@media screen and (max-width: 1024px) {
+    .tableContainer {
+        padding: 24px 24px 56px;
+    }
 }

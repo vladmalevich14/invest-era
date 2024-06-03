@@ -2,33 +2,15 @@ import styles from './main.module.css'
 
 export const Main = () => {
 
-    const BASE_URL = 'http://127.0.0.1:8000/'
-
-    const data = fetch(BASE_URL + 'api/tables/model-portfolio-usa/', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    }).then((res)=>{
-        return res.json()
-    })
-
-    const data2 = fetch(BASE_URL + 'api/tables/online-table-chn/', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    }).then((res)=>{
-        return res.json()
-    })
-
     return (
         <div className={styles.mainContainer}>
+            <h1 className={styles.pageHeader}>Портфели</h1>
+            <span className={styles.separator}></span>
             <h2 className={styles.linksHeader}>США</h2>
-            <a href="#" className={styles.links}>Американские компании</a>
+            <a href="/usa" className={styles.links}>Американские компании с наибольшим числом работников</a>
 
             <h2 className={styles.linksHeader}>Китай</h2>
-            <a href="#" className={styles.links}>Китайские компании</a>
+            <a href="/china" className={styles.links}>Китайские компании с наибольшим числом работников</a>
         </div>
     );
 };
