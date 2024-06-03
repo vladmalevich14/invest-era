@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import {StateType} from "types/state";
 import arrow from 'assets/svg/left-arrow.svg'
 import {useNavigate} from "react-router-dom";
-import {LeftArrow} from "assets/left-arrow";
 import styles from './tablePage.module.css'
 import {Table} from "components/tablePage/table/table";
 
@@ -14,7 +13,6 @@ type PropsType = {
 export const TablePage = ({country}: PropsType) => {
     const navigate = useNavigate();
     const [state, setState] = useState<StateType[]>([])
-    const [firstCompany, setFirstCompany] = useState<number>(0)
 
     const getData = async () => {
         if (country === 'USA') {
@@ -28,11 +26,6 @@ export const TablePage = ({country}: PropsType) => {
             setState(data)
         }
     };
-
-/*    const onClickHandler = (direction: string) => {
-        if (direction === 'next' && firstCompany < state.length && firstCompany + 15 < state.length) setFirstCompany(prevState => prevState + 15)
-        if (direction === 'back' && firstCompany !== 0) setFirstCompany(prevState => prevState - 15)
-    }*/
 
     useEffect(() => {
         getData()
@@ -56,15 +49,7 @@ export const TablePage = ({country}: PropsType) => {
                 {country === 'USA' ? 'Американские' : 'Китайские'} компании с наибольшим числом работников
             </h1>
 
-{/*            <div className={styles.pagination}>
-                <button className={styles.backArrow} onClick={() => onClickHandler('back')}>
-                    <LeftArrow/>
-                </button>
-                <button className={styles.nextArrow} onClick={() => onClickHandler('next')}>
-                    <LeftArrow/>
-                </button>
-            </div>*/}
-            <Table state={state} firstCompany={firstCompany} country={country}/>
+            <Table state={state} country={country}/>
         </div>
     );
 };

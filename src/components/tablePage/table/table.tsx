@@ -5,11 +5,10 @@ import {useRef} from "react";
 
 type PropsType = {
     state: StateType[]
-    firstCompany: number
     country: string
 }
 
-export const Table = ({state, firstCompany, country}: PropsType) => {
+export const Table = ({state, country}: PropsType) => {
     const tableRef = useRef<HTMLDivElement>(null);
 
     const condition = (companyIndicator: string | undefined) => {
