@@ -32,36 +32,7 @@ h1 {
     color: rgba(23, 35, 57, 1);
 }
 
-.pagination {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    margin-bottom: 16px;
-}
 
-.backArrow, .nextArrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(243, 255, 249, 1);
-    border-radius: 38px;
-    border: none;
-}
-
-.backArrow:hover, .nextArrow:hover {
-    cursor: pointer;
-}
-
-.backArrow:hover svg path, .nextArrow:hover svg path {
-    fill: rgba(6, 129, 62, 1);
-}
-
-.nextArrow {
-    rotate: 180deg;
-    z-index: 0;
-}
 
 @media screen and (max-width: 1700px) {
     .tablePageContainer {

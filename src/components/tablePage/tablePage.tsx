@@ -29,10 +29,10 @@ export const TablePage = ({country}: PropsType) => {
         }
     };
 
-    const onClickHandler = (direction: string) => {
+/*    const onClickHandler = (direction: string) => {
         if (direction === 'next' && firstCompany < state.length && firstCompany + 15 < state.length) setFirstCompany(prevState => prevState + 15)
         if (direction === 'back' && firstCompany !== 0) setFirstCompany(prevState => prevState - 15)
-    }
+    }*/
 
     useEffect(() => {
         getData()
@@ -56,14 +56,14 @@ export const TablePage = ({country}: PropsType) => {
                 {country === 'USA' ? 'Американские' : 'Китайские'} компании с наибольшим числом работников
             </h1>
 
-            <div className={styles.pagination}>
+{/*            <div className={styles.pagination}>
                 <button className={styles.backArrow} onClick={() => onClickHandler('back')}>
                     <LeftArrow/>
                 </button>
                 <button className={styles.nextArrow} onClick={() => onClickHandler('next')}>
                     <LeftArrow/>
                 </button>
-            </div>
+            </div>*/}
             <Table state={state} firstCompany={firstCompany} country={country}/>
         </div>
     );
