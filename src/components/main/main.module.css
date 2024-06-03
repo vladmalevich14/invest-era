@@ -1,0 +1,22 @@
+.mainContainer {
+    font-family: Montserrat, sans-serif;
+}
+
+.linksHeader {
+
+}
+
+.links {
+    color: #047337;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px solid #047337;
+        padding-bottom: .1px;
+    }
+}
