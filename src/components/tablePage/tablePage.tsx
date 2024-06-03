@@ -39,7 +39,7 @@ export const TablePage = ({country}: PropsType) => {
     }, []);
 
     return (
-        <div className={styles.tableContainer}>
+        <div className={styles.tablePageContainer}>
             <div className={styles.breadCrumbs}>
                 <div>
                     <img src={arrow} alt="back arrow"/>

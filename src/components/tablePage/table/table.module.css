@@ -1,6 +1,16 @@
+.tableContainer {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.tableContainer::-webkit-scrollbar {
+    display: none;
+}
+
 .table {
+    width: max-content;
+    table-layout: fixed;
     border-spacing: 0;
-    width: 100%;
     border: 1px solid rgba(219, 219, 219, 1);
     border-radius: 12px;
     word-break: break-all
@@ -72,11 +82,31 @@ th {
 .companyName, .companyTitle {
     width: 200px;
     border-right: 2px solid rgba(219, 219, 219, 1);
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .companyTitle {
     padding-left: 24px;
+    background-color: rgba(237, 237, 237, 1);
 }
+
+.tableBody tr:nth-child(even) td:first-child {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tableBody tr:nth-child(odd) td:first-child{
+    background-color: rgba(248, 248, 248, 1);
+}
+
+.columnHead,
+.companyIndicator {
+    position: sticky;
+    z-index: 0;
+}
+
 
 .companyName {
     padding: 16px 24px;
@@ -94,6 +124,7 @@ th {
     font-weight: 500;
     line-height: 22px;
     letter-spacing: -0.008em;
+    max-width: 123px;
 }
 
 .companyIndicator, .companyName {
@@ -124,7 +155,7 @@ th {
 }
 
 @media screen and (max-width: 840px) {
-    .tableHead th, .indicatorFontSize td{
+    .tableHead th, .indicatorFontSize td {
         font-size: 10px;
     }
 
