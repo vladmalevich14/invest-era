@@ -164,42 +164,19 @@ th {
     border-bottom: 1px solid rgba(219, 219, 219, 1);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 720px) {
     .tableHead th {
-        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-}
 
-@media screen and (max-width: 1300px) {
     .companyName, .companyTitle {
         width: 150px;
     }
 }
 
-@media screen and (max-width: 940px) {
-    .tableHead th {
-        font-size: 12px;
-    }
-
-    .companyName, .companyTitle, .indicatorFontSize td {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 840px) {
-    .tableHead th, .indicatorFontSize td {
-        font-size: 10px;
-    }
-
+@media screen and (max-width: 450px) {
     .companyName, .companyTitle {
-        font-size: 10px;
         width: 100px;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .tableHead th {
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 }
